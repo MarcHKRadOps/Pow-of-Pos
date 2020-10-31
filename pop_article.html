@@ -1,0 +1,133 @@
+<html>
+<head>
+    <script src=''></script> <!-- uploaded prebid file references here -->
+    <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+    <script>
+        var adUnits = [
+        {
+            code: '/125533616/body5',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 390]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body5'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776684'}},
+                {bidder:'sovrn',size:['336x390'],params:{tagid:'776695'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522935}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body5_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body5_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:'20484909'}},
+            ]
+        },
+        {
+            code: '/125533616/body6',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 390]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body6'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776685'}},
+                {bidder:'sovrn',size:['336x390'],params:{tagid:'776696'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522936}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body6_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body6_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:'20484909'}},
+            ]
+        },
+        ];
+
+        const customPriceMap = {
+            'buckets' : [
+                {'min' : 0,'max' : 20,'increment' : 0.01 },
+                {'min' : 20.05,'max' : 29.95,'increment' : 0.05},
+                {'min' : 30,'max' : 39.90,'increment' : 0.1},
+                {'min' : 40,'max' : 50,'increment' : 0.5},
+                {'min' : 50,'max' : 99,'increment' : 1.0}
+            ]
+        };
+
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+        });
+
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+
+        pbjs.que.push(function() {
+            pbjs.addAdUnits(adUnits);
+            pbjs.setConfig({
+                userSync: {
+                    iframeEnabled: true,
+                    filterSettings: {
+                        iframe: {bidders: '*',filter: 'include'}
+                    }
+                },
+                priceGranularity: customPriceMap,
+                useBidCache: true,
+            });
+            pbjs.requestBids({
+                timeout: 1500,
+                bidsBackHandler: initAdserver
+            });
+        });
+
+        pbjs.bidderSettings = {
+            oftmedia: {
+                bidCpmAdjustment: function( bidCpm ) {
+                    return bidCpm *0.7;
+                }
+            }
+        };
+
+        function initAdserver() {
+            if (pbjs.initAdserverSet) return;
+            pbjs.initAdserverSet = true;
+            googletag.cmd.push(function() {
+                pbjs.que.push(function() {
+                    pbjs.setTargetingForGPTAsync();
+                    googletag.pubads().refresh();
+                });
+            });
+        }
+            
+        setTimeout(function() {
+            initAdserver();
+        }, 3000);
+
+        googletag.cmd.push(function() {          
+            googletag.defineSlot('/125533616/body5',[[300, 250],[336, 390],'fluid'],'ad-body5').addService(googletag.pubads());
+            googletag.defineSlot('/125533616/body6',[[300, 250],[336, 390],'fluid'],'ad-body6').addService(googletag.pubads());
+
+            googletag.pubads().setTargeting("url", window.location.hostname);
+            var pathParts = window.location.pathname.substr(0).split("/");
+            googletag.pubads().setTargeting("lp", pathParts[1] ? pathParts[1] : "home");
+            googletag.pubads().setTargeting("category", pathParts[2] ? pathParts[2] : "none");
+            googletag.pubads().enableLazyLoad({fetchMarginPercent: 0,renderMarginPercent: 0});
+            //googletag.pubads().enableSingleRequest();
+            //googletag.pubads().collapseEmptyDivs(true);
+            googletag.enableServices();
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id='ad-body5'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body5');
+            });
+        </script>
+    </div>
+    <div id='ad-body6'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body6');
+            });
+        </script>
+    </div>
+
+</body>
+</html>
