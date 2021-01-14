@@ -5,6 +5,36 @@
     <script>
         var adUnits = [
         {
+            code: '/125533616/body3',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 390]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body3'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776682'}},
+                {bidder:'sovrn',size:['336x390'],params:{tagid:'776693'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522933}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body3_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body3_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
+            ]
+        },
+        {
+            code: '/125533616/body4',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 390]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body4'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776694'}},
+                {bidder:'sovrn',size:['336x390'],params:{tagid:'776693'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522934}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body4_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body4_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
+            ]
+        },
+        {
             code: '/125533616/body5',
             mediaTypes: {banner:{sizes: [[300, 250],[336, 390]]}},
             bids: [
@@ -16,7 +46,7 @@
                 {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
                 {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body5_Desktop'}},
                 {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body5_Mobile'}},
-                {bidder:'oftmedia',params:{placementId:'20484909'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
             ]
         },
         {
@@ -31,7 +61,7 @@
                 {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
                 {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body6_Desktop'}},
                 {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body6_Mobile'}},
-                {bidder:'oftmedia',params:{placementId:'20484909'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
             ]
         },
         ];
@@ -39,10 +69,6 @@
         const customPriceMap = {
             'buckets' : [
                 {'min' : 0,'max' : 20,'increment' : 0.01 },
-                {'min' : 20.05,'max' : 29.95,'increment' : 0.05},
-                {'min' : 30,'max' : 39.90,'increment' : 0.1},
-                {'min' : 40,'max' : 50,'increment' : 0.5},
-                {'min' : 50,'max' : 99,'increment' : 1.0}
             ]
         };
 
@@ -86,7 +112,7 @@
             pbjs.initAdserverSet = true;
             googletag.cmd.push(function() {
                 pbjs.que.push(function() {
-                    pbjs.setTargetingForGPTAsync();
+                    pbjs.setTargetingForGPTAsync && pbjs.setTargetingForGPTAsync();
                     googletag.pubads().refresh();
                 });
             });
@@ -97,6 +123,8 @@
         }, 3000);
 
         googletag.cmd.push(function() {          
+            googletag.defineSlot('/125533616/body3',[[300, 250],[336, 390],'fluid'],'ad-body3').addService(googletag.pubads());
+            googletag.defineSlot('/125533616/body4',[[300, 250],[336, 390],'fluid'],'ad-body4').addService(googletag.pubads());
             googletag.defineSlot('/125533616/body5',[[300, 250],[336, 390],'fluid'],'ad-body5').addService(googletag.pubads());
             googletag.defineSlot('/125533616/body6',[[300, 250],[336, 390],'fluid'],'ad-body6').addService(googletag.pubads());
 
@@ -114,6 +142,20 @@
 
 <body>
 
+    <div id='ad-body3'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body3');
+            });
+        </script>
+    </div>
+    <div id='ad-body4'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body4');
+            });
+        </script>
+    </div>
     <div id='ad-body5'>
         <script type='text/javascript'>
             googletag.cmd.push(function() {
