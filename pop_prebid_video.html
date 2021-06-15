@@ -1,0 +1,299 @@
+<html>
+<head>
+<script async src=""></script> <!--Link to uploaded prebid file-->
+<script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+<script>
+        var adUnits = [
+        {
+            code: '/125533616/body3',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 280]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body3'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776682'}},
+                {bidder:'sovrn',size:['336x280'],params:{tagid:'776693'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522933}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body3_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body3_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
+            ]
+        },
+        {
+            code: '/125533616/body4',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 280]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body4'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776694'}},
+                {bidder:'sovrn',size:['336x280'],params:{tagid:'776693'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522934}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body4_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body4_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
+            ]
+        },
+        {
+            code: '/125533616/body5',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 280]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body5'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776684'}},
+                {bidder:'sovrn',size:['336x280'],params:{tagid:'776695'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522935}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body5_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body5_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
+            ]
+        },
+        {
+            code: '/125533616/body6',
+            mediaTypes: {banner:{sizes: [[300, 250],[336, 280]]}},
+            bids: [
+                {bidder:'sonobi',params:{ad_unit:'/125533616/body6'}},
+                {bidder:'sovrn',size:['300x250'],params:{tagid:'776685'}},
+                {bidder:'sovrn',size:['336x280'],params:{tagid:'776696'}},
+                {bidder:'conversant',params:{site_id:'203948', secure:1}},
+                {bidder:'appnexus',params:{placementId:20522936}},
+                {bidder:'medianet',params:{cid:'8CU88M3AL', crid:'197110777'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body6_Desktop'}},
+                {bidder:'triplelift',params:{inventoryCode:'PowerOfPositivity_Body6_Mobile'}},
+                {bidder:'oftmedia',params:{placementId:20484909}},
+            ]
+        },
+        ];
+
+    var videoAdUnit = {
+        code: '/125533616/preroll',
+        mediaTypes: {
+            video: {
+                playerSize: [640, 480],
+                context: 'instream'
+            }
+        },
+        bids: [{
+            bidder: 'spotx', params: { channel_id:'79391', ad_unit:'instream', video: {skipppable: true, playback_method: ['auto_play_sound_off']}},
+            bidder: 'medianet', params: {cid: '8CU88M3AL', crid: '451818867', video: {mimes: ['video/mp4'], placement: 1}},
+            bidder: 'onefiftytwomedia', params: { aid:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}},
+            bidder: 'oftmedia', params: { placementId:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}},
+            //bidder: 'oftmediahb', params: { oftmediahb:'cpm.152media.com', zoneId:'21424094' , video: {skipppable: true, playback_method: ['auto_play_sound_off']}},
+            bidder: 'appnexus', params: { placementId:21757779 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}},
+            }],
+        ortb2Imp: {
+            ext: {
+                data: {
+                    jwTargeting: {
+                        playerID: 'playerContainerJW',
+                    }
+                }
+            }
+        }
+    };
+
+    const customPriceMap = {
+        'buckets' : [
+            {'precision': 2,'max': 20,'increment': 0.01 },
+        ]
+    };
+
+    const customVideoPriceMap = {
+        'buckets' : [
+            {'precision': 2,'max': 1,'increment': 0.05 },
+            {'precision': 2,'max': 10,'increment': 0.10 },
+            {'precision': 2,'max': 40,'increment': 0.20 },
+            {'precision': 2,'max': 70,'increment': 0.25 },
+
+        ]
+    };
+
+    var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+            var tempTag = false;
+            var invokeVideoPlayer = function(url) {
+                tempTag = url;
+            };
+
+            pbjs.que.push(function() {
+                pbjs.addAdUnits(adUnits);
+                pbjs.addAdUnits(videoAdUnit);
+                pbjs.setConfig({
+                    realTimeData: {
+                        auctionDelay: 100,
+                        dataProviders: [{
+                            name: "jwplayer",
+                            waitForIt: true,
+                            params: {}
+                        }]
+                    },
+                    userSync: {
+                        iframeEnabled: true,
+                        filterSettings: {
+                            iframe: {bidders: '*',filter: 'include'}
+                        }
+                    },
+                    'mediaTypePriceGranularity': {
+                        'video': customVideoPriceMap,   
+                        'banner': customPriceMap,
+                    },
+                    useBidCache: true,
+                    debug: true,
+                    cache: {
+                        url: 'https://prebid.adnxs.com/pbc/v1/cache',
+                        ignoreBidderCacheKey: true,
+                    }
+                });
+                pbjs.requestBids({
+                    bidsBackHandler: initAdserver,
+                    timeout: 1500,
+                    auctionId: 'auction_1'
+                })
+            });
+
+            pbjs.bidderSettings = {
+                oftmedia: {
+                    bidCpmAdjustment: function( bidCpm ) {
+                        return bidCpm *0.7;
+                    }
+                }
+            };
+
+            function initAdserver(bids) {
+                if (pbjs.initAdserverSet) return;
+                pbjs.initAdserverSet = true;
+                googletag.cmd.push(function() {
+                    pbjs.que.push(function() {
+                        pbjs.setTargetingForGPTAsync && pbjs.setTargetingForGPTAsync();
+                        googletag.pubads().refresh();
+                    });
+                });
+                var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
+                    adUnit: videoAdUnit,
+                    params: {
+                        iu: '/125533616/preroll',
+                        output: 'vast',
+                        hl: 'en',
+                        description_url: encodeURIComponent(window.location.hostname),
+                    }
+                });
+                invokeVideoPlayer(videoUrl);
+            }
+            setTimeout(function() {
+                initAdserver();
+            }, 3000);
+
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/125533616/body3',[[300, 250],[336, 280],'fluid'],'ad-body3').addService(googletag.pubads());
+                googletag.defineSlot('/125533616/body4',[[300, 250],[336, 280],'fluid'],'ad-body4').addService(googletag.pubads());
+                googletag.defineSlot('/125533616/body5',[[300, 250],[336, 280],'fluid'],'ad-body5').addService(googletag.pubads());
+                googletag.defineSlot('/125533616/body6',[[300, 250],[336, 280],'fluid'],'ad-body6').addService(googletag.pubads());
+
+                googletag.pubads().setTargeting("url", window.location.hostname);
+                var pathParts = window.location.pathname.substr(0).split("/");
+                googletag.pubads().setTargeting("lp", pathParts[1] ? pathParts[1] : "home");
+                googletag.pubads().setTargeting("category", pathParts[2] ? pathParts[2] : "none");
+                googletag.pubads().enableLazyLoad({fetchMarginPercent: 0,renderMarginPercent: 0});
+                googletag.enableServices();
+            });
+</script>
+</head>
+<body>
+<div id="playerContainerJW" style='width:640px; height:480px; border:1px solid black;'></div>
+        <script src="https://cdn.jwplayer.com/libraries/Znxcp35y.js"></script>
+        <script>
+            var playerInstance = jwplayer('playerContainerJW');
+
+            function invokeVideoPlayer(url) {
+                playerInstance.setup({
+            "playlist": "https://cdn.jwplayer.com/v2/playlists/pNTTojge?search=__CONTEXTUAL__",
+                    "width": 640,
+                    "height": 480,
+                    "advertising": {
+                        "client": "vast",
+                        "schedule": [{
+                            "offset": 15,
+                            "tag": url
+                            },
+                            {
+                            "offset": 30,
+                            "tag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/125533616/preroll&description_url=http%3A%2F%2Fpowerofpositivity.com&tfcd=0&npa=0&sz=400x300%7C640x480&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
+                            }]
+                    },
+                    "aspectratio": "16:9",
+                    "cast": {
+                      "appid": "00000000"
+                    },
+                    "controls": true,
+                    "displaydescription": true,
+                    "displaytitle": false,
+                    "floating": {},
+                    "key": "r259lqXo2QlM9QUKTurft0+0ULaW6SWYlz25LdPAMGfjfsxB9EiSzbXkCQZ5eVxI",
+                    "mute": false,
+                    "ph": 1,
+                    "pid": "Znxcp35y",
+                    "playbackRateControls": false,
+                    "preload": "none",
+                    "repeat": false,
+                    "sharing": {
+                      "sites": [
+                        "facebook",
+                        "twitter",
+                        "email",
+                        "pinterest",
+                        "reddit",
+                        "tumblr"
+                      ]
+                    },
+                    "stretching": "uniform",
+
+                
+    });
+    jwPlayerInstance.on('adLoaded', function() {console.log("ad loaded!")})
+    jwPlayerInstance.on('beforePlay', function() {jwPlayerInstance.playAd(url)})
+
+    }
+    
+    if (tempTag) {
+        invokeVideoPlayer(tempTag);
+        tempTag = false;
+    }
+</script>
+    
+    <div id='ad-body3'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body3');
+            });
+        </script>
+    </div>
+    <div id='ad-body4'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body4');
+            });
+        </script>
+    </div>
+    <div id='ad-body5'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body5');
+            });
+        </script>
+    </div>
+    <div id='ad-body6'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-body6');
+            });
+        </script>
+    </div>
+</body>
+</html>
