@@ -70,7 +70,7 @@
         code: '/125533616/preroll',
         mediaTypes: {
             video: {
-                playerSize: [640, 480],
+                playerSize: [[640, 480]],
                 context: 'instream',
                 mimes: ['video/mp4'],
             }
@@ -81,7 +81,7 @@
             {bidder: 'onefiftytwomedia', params: { aid:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
             {bidder: 'oftmedia', params: { placementId:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
             {bidder: 'appnexus', params: { placementId:21757779 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
-            {bidder:'conversant',params:{site_id:'203948', secure:1, video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
+            {bidder: 'conversant',params:{site_id:'203948', secure:1, mimes: ['video/mp4'], video: {mimes: ['video/mp4'], skipppable: true, playback_method: ['auto_play_sound_off']}}},
             ],
         ortb2Imp: {
             ext: {
