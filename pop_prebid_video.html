@@ -76,12 +76,13 @@
             }
         },
         bids: [
-            {bidder: 'spotx', params: { channel_id:'79391', ad_unit:'instream', video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
-            {bidder: 'medianet', params: {cid: '8CU88M3AL', crid: '451818867', video: {mimes: ['video/mp4'], placement: 1}}},
-            {bidder: 'onefiftytwomedia', params: { aid:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
-            {bidder: 'oftmedia', params: { placementId:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
-            {bidder: 'appnexus', params: { placementId:21757779 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
-            {bidder: 'conversant',params:{site_id:'203948', secure:1, mimes: ['video/mp4'], video: {mimes: ['video/mp4'], skipppable: true, playback_method: ['auto_play_sound_off']}}},
+            {bidder:'spotx', params: {channel_id:'79391', ad_unit:'instream', video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
+            {bidder:'medianet', params: {cid: '8CU88M3AL', crid: '451818867', video: {mimes: ['video/mp4'], placement: 1}}},
+            {bidder:'onefiftytwomedia', params: {aid:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
+            {bidder:'oftmedia', params: {placementId:21424094 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
+            {bidder:'appnexus', params: {placementId:21757779 , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
+            {bidder:'conversant',params:{site_id:'203948', secure:1, mimes: ['video/mp4'], video: {mimes: ['video/mp4'], skipppable: true, playback_method: ['auto_play_sound_off']}}},
+            {bidder:'emx_digital', params: {tagid:'149176' , video: {skipppable: true, playback_method: ['auto_play_sound_off']}}},
             ],
         ortb2Imp: {
             ext: {
@@ -103,7 +104,6 @@
     const customVideoPriceMap = {
         'buckets' : [
             {'precision': 2,'max': 1,'increment': 0.05 },
-            {'precision': 2,'max': 10,'increment': 0.10 },
             {'precision': 2,'max': 40,'increment': 0.20 },
             {'precision': 2,'max': 70,'increment': 0.25 },
 
